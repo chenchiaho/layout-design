@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "header header header header"
+                "nav nav nav nav"
+                "main main main aside"
+                "footer footer footer footer"
+            ;
+        }
+
+        .wrapper img {
+            max-width: 100%;
+        }
+
+        header {
+            grid-area: header;
+            background: yellow;
+        }
+
+        header img {
+            display: block;
+        }
+
+        nav {
+            background: lightgreen;
+            grid-area: nav;
+        }
+
+        main {
+            background: lightsalmon;
+            grid-area: main;
+        }
+
+        aside {
+            /* background: pink; */
+            grid-area: aside;
+        }
+
+        footer {
+            background: lightblue;
+            grid-area: footer;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .list-unstyled {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-nav ul {
+            display: flex;
+        }
+
+        .main-nav ul a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .main-nav ul a:hover {
+            background: #eee;
+            ;
+        }
+
+        @media screen and (max-width: 768px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+
+            iframe {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="./image/banner.jpg" alt="">
+        </header>
+        <nav class="main-nav">
+            <ul class="list-unstyled">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>仙台市</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14730.5778806298!2d120.28477439999999!3d22.629747899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e047a63eb147f%3A0x6741d6ccf38f0a06!2sKaohsiung%20Museum%20of%20History!5e0!3m2!1sen!2stw!4v1668223115855!5m2!1sen!2stw"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <p>仙台市（日語：仙台市〔仙臺市〕／せんだいし Sendai shi
+                    */?）是日本宮城縣縣治，位於宮城縣中部，為東北地方最大都市，同時也是東北地方唯一的政令指定都市。市名一般認為得名於古城「千代城」，於1600年由安土桃山時代名將伊達政宗擴建並改名為同音[註
+                    1]的「仙臺」，此詞係出自唐代韓翃的七言律詩《同題仙遊觀》[1][2]。由於全市綠化比例高，而有「杜之都」（森林之都）之譽。</p>
+                <h2>歷史</h2>
+                <p>仙台藩主伊達政宗最早在此建城，奠定了現在仙台市的市街基礎。伊達政宗自1600年開始築城，之後不斷推行新計畫，進行城建設計和開發等。當時的仙台非常繁榮，西班牙的使節形容當時的情形為—東西南北人來人往，勝似江戶（現在的東京）。
+                </p>
+                <p>仙台的街道既重功能性又具有現代化城市的特點，其發展完全歸功於伊達政宗的遠見，他為未來的仙台市的發展打好基礎。仙台的街道佈局和現在發展情形連同廣瀨川一起，從伊達政宗所建造的仙台古城遺跡上往下俯瞰，一覽無遺。
+                </p>
+            </div>
+        </main>
+        <aside>
+            <h2>附近景點</h2>
+            <ul>
+                <li>景點一</li>
+                <li>景點二</li>
+
+            </ul>
+        </aside>
+        <footer>footer</footer>
+
+    </div>
+
+
+</body>
+
+</html>
